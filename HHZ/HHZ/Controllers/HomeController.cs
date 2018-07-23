@@ -15,14 +15,43 @@ namespace HHZ.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            //ViewBag.Message = "Your application description page.";
 
             return View();
         }
 
-        public ActionResult Contact()
+
+        public ActionResult SearchResult()
         {
-            ViewBag.Message = "Your contact page.";
+
+
+            return View();
+        }
+
+
+        public ActionResult HowItsWorks()
+        {
+
+            return View();
+        }
+
+
+        public ActionResult BlogPost()
+        {
+
+            return View();
+        }
+
+
+        public ActionResult BlogPostDetail()
+        {
+
+            return View();
+        }
+
+
+        public ActionResult DoctorDetail()
+        {
 
             return View();
         }
