@@ -38,78 +38,75 @@
                                     <li><a href="#"><i class="fa fa-thumbs-o-up"></i> 99% (1009 votes)</a></li>
                                 </ul>
                             </div>
-                            <a class="tg-btn tg-btn-lg" href="#">Edit Profile</a>
+                            <a class="tg-btn tg-btn-lg" href="@Url.Action("ProfileSetting","Home")">Edit Profile</a>
+
                         </div>
+
                         <nav id="tg-dashboardnav" class="tg-dashboardnav">
                             <ul>
                                 <li>
-                                    <a href="dashboard.html">
+                                    <a href="@Url.Action("Dashboard","Home")">
                                         <i class="fa fa-line-chart"></i>
                                         <span>Insights</span>
                                     </a>
                                 </li>
-                                <li>
-                                    <a href="dashboard-badgepopup.html">
-                                        <i class="fa fa-line-chart"></i>
-                                        <span>Insights two</span>
-                                    </a>
-                                </li>
+
                                 <li class="tg-warningmessage">
-                                    <a href="dashboard-profilesetting.html">
+                                    <a href="@Url.Action("ProfileSetting","Home")">
                                         <i class="fa fa-user"></i>
                                         <span>Profile Settings</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dashboard-jobslocations.html">
+                                    <a href="@Url.Action("JobLoction","Home")">
                                         <i class="fa fa-location-arrow"></i>
                                         <span>Job Locations</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dashboard-privatemessages.html">
+                                    <a href="@Url.Action("PrivateMessages","Home")">
                                         <i class="fa fa-envelope-o"></i>
                                         <span>Private Messages</span>
                                     </a>
                                 </li>
-                                <li class="tg-successmessage">
-                                    <a href="dashboard-appointments.html">
+                                <li class="tg-successmessage tg-active">
+                                    <a href="@Url.Action("Appointment","Home")">
                                         <i class="fa fa-calendar-check-o"></i>
                                         <span>Appointments</span>
                                     </a>
                                 </li>
                                 <li class="tg-errormessage">
-                                    <a href="dashboard-appoinmentsetting.html">
+                                    <a href="@Url.Action("AppointmentSetting","Home")">
                                         <i class="fa fa-gear"></i>
                                         <span>Appointment Settings</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dashboard-favoritlisting.html">
+                                    <a href="@Url.Action("FavoritListing","Home")">
                                         <i class="fa fa-heart"></i>
                                         <span>Favourite Listings</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dashboard-invoices.html">
+                                    <a href="@Url.Action(Url.Action("Invoice","Home"))">
                                         <i class="fa fa-clone"></i>
                                         <span>Invoices</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dashboard-upgradepackage.html">
+                                    <a href="@Url.Action("UpdatePackage","Home")">
                                         <i class="fa fa-arrow-up"></i>
                                         <span>Update Package</span>
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="dashboard-securitysettings.html">
+                                    <a href="@Url.Action("SecuritySettings","Home")">
                                         <i class="fa fa-gears"></i>
                                         <span>Security Settings</span>
                                     </a>
                                 </li>
-                                <li class="tg-active">
-                                    <a href="dashboard-privacy-settings.html">
+                                <li>
+                                    <a href="@Url.Action("PrivacySettings","Home")">
                                         <i class="fa fa-eye"></i>
                                         <span>Privacy Settings</span>
                                     </a>
@@ -122,6 +119,8 @@
                                 </li>
                             </ul>
                         </nav>
+
+
                     </div>
                     <div class="tg-widgetdashboard">
                         <div class="tg-dashboardnotification tg-pkgexpirey"><span>13 days</span>silver package Expire in</div>

@@ -48,10 +48,15 @@ namespace HHZ.Models
 
     public class LoginViewModel
     {
+        //[Required]
+        //[Display(Name = "Email")]
+        //[EmailAddress]
+        //public string Email { get; set; }
+
+
         [Required]
-        [Display(Name = "Email")]
-        [EmailAddress]
-        public string Email { get; set; }
+        [Display(Name = "UserName")]
+        public string UserName { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
@@ -64,6 +69,16 @@ namespace HHZ.Models
 
     public class RegisterViewModel
     {
+        [Required]
+        [Display(Name = "User Roles")]
+        public string UserRoles { get; set; }
+
+
+        [Required]
+        [Display(Name = "User Name")]
+        public string UserName { get; set; }
+
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

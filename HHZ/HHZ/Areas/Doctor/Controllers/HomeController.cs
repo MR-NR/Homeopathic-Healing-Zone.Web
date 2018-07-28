@@ -1,4 +1,8 @@
-﻿using System;
+﻿using HHZ.Data;
+using HHZ.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -6,14 +10,17 @@ using System.Web.Mvc;
 
 namespace HHZ.Areas.Doctor.Controllers
 {
+    [Authorize]
     public class HomeController : Controller
     {
         // GET: Doctor/Doctor
         
         public ActionResult Dashboard()
         {
+      
             return View();
         }
+
 
         // GET: Profile Setting
         public ActionResult ProfileSetting()
@@ -47,6 +54,18 @@ namespace HHZ.Areas.Doctor.Controllers
 
         // GET: Favorit Listing
         public ActionResult FavoritListing()
+        {
+            return View();
+        }
+
+        // GET: Patient
+        public ActionResult NewPatient()
+        {
+            return View();
+        }
+
+        // GET: Patient
+        public ActionResult ExPatient()
         {
             return View();
         }

@@ -55,9 +55,10 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-xs-12 col-sm-12">
-                            <span class="tg-quickadvice">Get a Quick Advice: <strong>(+4) 1234 5667 - 9</strong></span>
+                            <span class="tg-quickadvice">Get a Quick Advice: <strong>(+92) 3457862345</strong></span>
                             <ul class="tg-contactinfo">
-                                <li><a href="#">info@domain.com</a></li>
+                                @*<li><a href="#">info@domain.com</a></li>*@
+                                <li>@Html.ActionLink("info@domain.com", "Index", "Home")</li>
                                 <li><address>147 Tottenham, London, W1T 1JY</address></li>
                             </ul>
                         </div>
@@ -68,7 +69,9 @@
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <strong class="tg-logo">
-                            <a href="index.html"><img src="~/images/logo.png" alt="image description"></a>
+                            @*<a href="index.html"><img src="~/images/logo.png" alt="image description"></a>*@
+                            <a href="@Url.Action("Index","Home")"><img src="~/images/logo.png" alt="image description"></a>
+
                         </strong>
                         <div class="tg-navigationarea">
                             <nav id="tg-nav" class="tg-nav">
@@ -85,25 +88,31 @@
                                         <li class="tg-hasdropdown">
                                             <a href="#">Categories</a>
                                             <ul class="tg-dropdownmenu">
-                                                <li><a href="searchresult-v1.html">Doctors</a></li>
-                                                <li><a href="searchresult-v2.html">Hospitals</a></li>
-                                                <li><a href="searchresult-v3.html">Spas</a></li>
-                                                <li><a href="searchresult-v1.html">Pharmacies</a></li>
-                                                <li><a href="searchresult-v2.html">Labs</a></li>
-                                                <li><a href="searchresult-v3.html">Fitness</a></li>
-                                                <li><a href="searchresult-v1.html">Clinics</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")" >Doctors</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")">Hospitals</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")">Spas</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")">Pharmacies</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")">Labs</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")">Fitness</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")">Clinics</a></li>
                                             </ul>
                                         </li>
-                                        <li><a href="aboutus.html">About</a></li>
-                                        <li><a href="how-its-works.html">How It Works?</a></li>
+                                        @*<li><a href="aboutus.html">About</a></li>*@
+                                        <li>@Html.ActionLink("About", "About", "Home")  </li>
+
+                                        @*<li><a href="how-its-works.html">How It Works?</a></li>*@
+                                        <li>@Html.ActionLink("How It Works", "HowItsWorks", "Home")  </li>
+
                                         <li class="tg-hasdropdown">
                                             <a href="javascript:void(0);">
                                                 <i class="hidden-xs fa fa-navicon"></i>
                                                 <span class="hidden-lg hidden-md hidden-sm">Pages</span>
                                             </a>
                                             <ul class="tg-dropdownmenu">
-                                                <li><a href="blogpostgrid.html">Blog Grid</a></li>
-                                                <li><a href="signin-signup.html">Signin-Signup</a></li>
+                                                @*<li><a href="blogpostgrid.html">Blog</a></li>*@
+                                                <li>@Html.ActionLink("Blog", "BlogPost", "Home")  </li>
+
+                                                @*<li><a href="signin-signup.html">Signin-Signup</a></li>*@
                                                 @Html.Partial("_LoginPartial")
                                             </ul>
 
@@ -287,11 +296,17 @@
                                 <ul>
                                     <li class="tg-active"><a href="#">Home</a></li>
                                     <li><a href="#">About</a></li>
+                                    <li>@Html.ActionLink("About", "About", "Home")  </li>
+
                                     <li><a href="#">How It Works?</a></li>
+                                    <li>@Html.ActionLink("How It Works", "HowItsWorks", "Home")  </li>
+
                                     <li><a href="#">Categories</a></li>
                                 </ul>
                             </nav>
-                            <span class="tg-copyright">2017 All Rights Reserved &copy; <a href="#">MedLink Direct</a></span>
+                            <span class="tg-copyright"> @DateTime.Now.Year All Rights Reserved &copy; <a href="#">MedLink Direct</a></span>
+         
+
                         </div>
                     </div>
                 </div>
