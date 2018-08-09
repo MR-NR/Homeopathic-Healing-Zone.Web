@@ -10,6 +10,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using HHZ.Models;
 using HHZ.Data;
+using HHZ.Common;
+using HHZ.ViewModels;
 
 namespace HHZ.Controllers
 {
@@ -58,6 +60,22 @@ namespace HHZ.Controllers
             {
                 _userManager = value;
             }
+        }
+
+
+        public ActionResult CheckRole(string returnUrl)
+        {
+            if (User.IsInRole(SecurityRoles.Admin))
+            {
+                return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+
+            }
+
+
+
+            return RedirectToLocal(returnUrl);
+
+
         }
 
         //
@@ -162,14 +180,34 @@ namespace HHZ.Controllers
         {
             if (ModelState.IsValid)
             {
-                var user = new ApplicationUser { UserName = model.UserName , Email = model.Email };
+                var user = new ApplicationUser
+                {
+                    UserName = model.UserName ,
+                    Email = model.Email,
+                    FirstName = model.FirstName,
+                    LastName = model.LastName
+                };
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
-                    await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+                    //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
+
+                    //var student = new Student
+                    //{
+                    //    FirstName = model.FirstName,
+                    //    LastName = model.LastName,
+                    //    UserId = user.Id,
+                    //    Email = model.Email,
+                    //    Mobile = model.Mobile,
+                    //};
+                    //await _studentService.CreateAsync(student);
+
+                    //await UserManager.AddToRoleAsync(user.Id, SecurityRoles.Student);
+
 
                     // For more information on how to enable account confirmation and password reset please visit https://go.microsoft.com/fwlink/?LinkID=320771
                     // Send an email with this link
+
                     // string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
                     // var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");

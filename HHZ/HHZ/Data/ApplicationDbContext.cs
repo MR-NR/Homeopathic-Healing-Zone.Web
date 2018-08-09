@@ -11,11 +11,14 @@ namespace HHZ.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        //public DbSet<Physician> Physicians { get; set; }
+        //public DbSet<Doctor> Doctors { get; set; }
+        //public DbSet<DoctorType> DoctorTypes { get; set; }
+        //public DbSet<DoctorQualification> PhysicianQualifications { get; set; }
+        //public DbSet<DoctorSpecialization> DoctorSpecializations { get; set; }
+        //public DbSet<Specialization> Specializations { get; set; }
+
         //public DbSet<ClinicInfo> ClinicInfos { get; set; }
         //public DbSet<ClinicTime> ClinicTimes { get; set; }
-        //public DbSet<PhysicianQualification> PhysicianQualifications { get; set; }
-        //public DbSet<Specialization> Specializations { get; set; }
         //public DbSet<Sign> signs { get; set; }
         //public DbSet<SignsValue> SignsValues { get; set; }
         //public DbSet<Test> Tests { get; set; }
@@ -34,6 +37,18 @@ namespace HHZ.Data
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
+        }
+
+
+
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)   //Fluent Api
+        {
+
+            modelBuilder.Properties<DateTime>()
+                .Configure(c => c.HasColumnType("datetime2"));
+
+            base.OnModelCreating(modelBuilder);
         }
     }
 

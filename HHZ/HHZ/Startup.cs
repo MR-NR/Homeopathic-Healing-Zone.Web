@@ -27,7 +27,7 @@ namespace HHZ
         //    var UserManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
 
 
-        //    // In Startup iam creating first Admin Role and creating a default Admin User    
+            // In Startup iam creating first Admin Role and creating a default Admin User    
         //    if (!roleManager.RoleExists("Admin"))
         //    {
 
@@ -39,9 +39,10 @@ namespace HHZ
         //        //Here we create a Admin super user who will maintain the website                  
 
         //        var user = new ApplicationUser();
+        //        user.FirstName = "Nisar";
+        //        user.LastName = "Ahmed";
         //        user.UserName = "Rao";
         //        user.Email = "M.Nisar@live.com";
-
         //        string userPWD = "123456789";
 
         //        var chkUser = UserManager.Create(user, userPWD);

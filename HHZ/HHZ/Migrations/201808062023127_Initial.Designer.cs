@@ -13,7 +13,7 @@ namespace HHZ.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201807261436121_Initial"; }
+            get { return "201808062023127_Initial"; }
         }
         
         string IMigrationMetadata.Source

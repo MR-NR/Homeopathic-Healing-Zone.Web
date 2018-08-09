@@ -132,7 +132,7 @@
                 <div class="col-lg-9 col-md-8 col-sm-8 col-xs-12 pull-right">
                     <div class="tg-dashboardtabs">
                         <ul class="tg-dashboardtabnav" role="tablist">
-                            <li role="presentation" class="active"> <a href="#overview" aria-controls="overview" role="tab" data-toggle="tab">Gernal</a> </li>
+                            <li role="presentation" class="active"> <a href="#Gernal" aria-controls="Gernal" role="tab" data-toggle="tab">Gernal</a> </li>
                             <li role="presentation"> <a href="#Signs" aria-controls="Signs" role="tab" data-toggle="tab">Signs</a> </li>
                             <li role="presentation"> <a href="#Complaints" aria-controls="Complaints" role="tab" data-toggle="tab">Complaints</a> </li>
                             <li role="presentation"> <a href="#History" aria-controls="History" role="tab" data-toggle="tab">History</a> </li>
@@ -148,7 +148,7 @@
                         <div class="tab-content tg-dashboardtabcontent">
 
                             @*1 tab Start*@
-                            <div role="tabpanel" class="tab-pane active" id="overview">
+                            <div role="tabpanel" class="tab-pane active" id="Gernal">
 
                                 <div class="tg-dashboardbox">
                                     <div class="tg-dashboardboxtitle">
@@ -156,12 +156,7 @@
                                     </div>
                                     <div class="tg-box tg-basicinformation">
                                         <div class="row tg-rowmargin">
-                                            <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                <div class="form-group tg-formgroup">
-                                                    <input type="text" name="Registration" class="form-control" placeholder="Registration No">
-                                                </div>
-                                            </div>
-
+                                         
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
                                                 <div class="form-group tg-formgroup">
                                                     <input type="text" name="Patientid" class="form-control" placeholder="Patient ID">
@@ -245,9 +240,12 @@
                                             </div>
 
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                <div class="form-group tg-formgroup">
-                                                    <input type="text" name="DOB" class="form-control" placeholder="DOB">
-                                                </div>
+                                                <span class="tg-inputicon tg-calendaricon">
+                                                    <div class="form-group tg-formgroup">
+                                                        <input type="text" name="DOB" class="form-control" placeholder="DOB" >
+                                                    </div>
+                                                </span>
+
                                             </div>
 
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
@@ -269,9 +267,11 @@
                                             </div>
 
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                <div class="form-group tg-formgroup">
-                                                    <input type="text" name="Suffering From" class="form-control" placeholder="Suffering From">
-                                                </div>
+                                                <span class="tg-inputicon tg-calendaricon">
+                                                    <div class="form-group tg-formgroup">
+                                                        <input type="text" name="Suffering From" class="form-control" placeholder="Suffering From">
+                                                    </div>
+                                                    </span>
                                             </div>
 
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
@@ -305,24 +305,20 @@
                                             </div>
 
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                <div class="form-group tg-formgroup">
-                                                    <input type="text" name="Date/Time" class="form-control" placeholder="Date / Time">
-                                                </div>
+                                                <span class="tg-inputicon tg-calendaricon">
+                                                    <div class="form-group tg-formgroup">
+                                                        <input type="text" name="Date/Time" class="form-control" placeholder="Date / Time">
+                                                    </div>
+                                                    </span>
                                             </div>
-
-
-
-
-
 
 
                                         </div>
                                     </div>
                                 </div>
-
                                 <div class="tg-updateall">
-                                    <span class="tg-note">* Click <strong>update all changes</strong> to update latest added detail (s).</span>
-                                    <button class="tg-btn" type="submit">update now</button>
+                                    
+                                    <button class="tg-btn" type="submit">Next</button>
                                 </div>
                             </div>
                             @*1 tab End*@
@@ -479,8 +475,6 @@
                                             </div>
 
 
-
-
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
                                                 <div class="form-group tg-formgroup">
                                                     <input type="text" name="DeathAge" class="form-control" placeholder="Death Age">
@@ -498,9 +492,6 @@
                                                     <input type="text" name="SufferingFrom" class="form-control" placeholder="Suffering From">
                                                 </div>
                                             </div>
-
-
-
 
 
 
@@ -579,22 +570,16 @@
                                             <div class="col-sm-12 col-xs-12 tg-columnpadding">
                                                 <input type="text" name="LIKES" class="form-control" placeholder="LIKES">
                                             </div>
-
                                             <div class="col-sm-12 col-xs-12 tg-columnpadding">
                                                 <input type="text" name="DISLIKES" class="form-control" placeholder="DISLIKES">
                                             </div>
-
-
-
-
-
                                         </div>
                                     </div>
                                 </div>
 
                                 <div class="tg-updateall">
-                                    <span class="tg-note">* Click <strong>update all changes</strong> to update latest added detail (s).</span>
-                                    <button class="tg-btn" type="submit">update now</button>
+                                  
+                                    <button class="tg-btn" type="submit">Next</button>
                                 </div>
                             </div>
                             @*5 tab End*@
@@ -645,9 +630,12 @@
                                             </div>
 
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                <div class="form-group tg-formgroup">
-                                                    <input type="text" name="Date/Time" class="form-control" placeholder="Date / Time">
-                                                </div>
+                                                <span class="tg-inputicon tg-calendaricon">
+
+                                                    <div class="form-group tg-formgroup">
+                                                        <input type="text" name="Date/Time" class="form-control" placeholder="Date / Time">
+                                                    </div>
+                                                    </span>
                                             </div>
 
 

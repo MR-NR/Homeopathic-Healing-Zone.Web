@@ -1,4 +1,5 @@
-﻿using HHZ.Data;
+﻿using HHZ.Common;
+using HHZ.Data;
 using HHZ.Models;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
@@ -10,7 +11,7 @@ using System.Web.Mvc;
 
 namespace HHZ.Areas.Doctor.Controllers
 {
-    [Authorize]
+    [Authorize(Roles = SecurityRoles.Doctor)]
     public class HomeController : Controller
     {
         // GET: Doctor/Doctor

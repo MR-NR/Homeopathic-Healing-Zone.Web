@@ -88,7 +88,7 @@
                                         <li class="tg-hasdropdown">
                                             <a href="#">Categories</a>
                                             <ul class="tg-dropdownmenu">
-                                                <li><a href="@Url.Action("SearchResult","Home")" >Doctors</a></li>
+                                                <li><a href="@Url.Action("SearchResult","Home")">Doctors</a></li>
                                                 <li><a href="@Url.Action("SearchResult","Home")">Hospitals</a></li>
                                                 <li><a href="@Url.Action("SearchResult","Home")">Spas</a></li>
                                                 <li><a href="@Url.Action("SearchResult","Home")">Pharmacies</a></li>
@@ -103,20 +103,28 @@
                                         @*<li><a href="how-its-works.html">How It Works?</a></li>*@
                                         <li>@Html.ActionLink("How It Works", "HowItsWorks", "Home")  </li>
 
-                                        <li class="tg-hasdropdown">
-                                            <a href="javascript:void(0);">
-                                                <i class="hidden-xs fa fa-navicon"></i>
-                                                <span class="hidden-lg hidden-md hidden-sm">Pages</span>
-                                            </a>
-                                            <ul class="tg-dropdownmenu">
-                                                @*<li><a href="blogpostgrid.html">Blog</a></li>*@
-                                                <li>@Html.ActionLink("Blog", "BlogPost", "Home")  </li>
+                                        @*<li><a href="blogpostgrid.html">Blog</a></li>*@
+                                        <li>@Html.ActionLink("Blog", "BlogPost", "Home")  </li>
 
-                                                @*<li><a href="signin-signup.html">Signin-Signup</a></li>*@
-                                                @Html.Partial("_LoginPartial")
-                                            </ul>
+                                           @Html.Partial("_LoginPartial")
 
-                                        </li>
+
+
+                                        @*<li class="tg-hasdropdown">*@
+                                        @*<a href="javascript:void(0);">
+            <i class="hidden-xs fa fa-navicon"></i>
+            <span class="hidden-lg hidden-md hidden-sm">Pages</span>
+        </a>*@
+
+                                        @*<ul class="tg-dropdownmenu">*@
+
+
+                                        @*<li><a href="signin-signup.html">Signin-Signup</a></li>*@
+
+
+                                        @*</ul>*@
+
+                                        @*</li>*@
                                     </ul>
                                 </div>
                             </nav>

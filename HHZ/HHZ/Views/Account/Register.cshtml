@@ -1,4 +1,4 @@
-﻿@model HHZ.Models.RegisterViewModel
+﻿@model HHZ.ViewModels.RegisterViewModel
 @{
     ViewBag.Title = "Register";
 }
@@ -138,25 +138,25 @@
                                                             </div>
                                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
                                                                 <div class="form-group tg-formgroup">
+                                                                    @*<input type="text" name="lasttname" class="form-control" placeholder="Last Name">*@
+                                                                    @Html.TextBoxFor(m => m.FirstName, new { @class = "form-control", placeholder = "First Name" })
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
+                                                                <div class="form-group tg-formgroup">
+                                                                    @*<input type="text" name="lasttname" class="form-control" placeholder="Last Name">*@
+                                                                    @Html.TextBoxFor(m => m.LastName, new { @class = "form-control", placeholder = "Last Name" })
+
+                                                                </div>
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
+                                                                <div class="form-group tg-formgroup">
                                                                     @*<input type="text" name="firstname" class="form-control" placeholder="User Name">*@
                                                                     @Html.TextBoxFor(m => m.UserName, new { @class = "form-control", placeholder = "User Name" })
 
                                                                 </div>
                                                             </div>
-
-                                                            <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                                <div class="form-group tg-formgroup">
-                                                                    <input type="text" name="First Name" class="form-control" placeholder="First Name">
-                                                                </div>
-                                                            </div>
-
-                                                            <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                                <div class="form-group tg-formgroup">
-                                                                    <input type="text" name="lasttname" class="form-control" placeholder="Last Name">
-                                                                </div>
-                                                            </div>
-
-
                                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
                                                                 <div class="form-group tg-formgroup">
                                                                     @*<input type="text" name="username" class="form-control" placeholder="Username">*@

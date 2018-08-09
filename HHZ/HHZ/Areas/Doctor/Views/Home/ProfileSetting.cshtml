@@ -1,4 +1,4 @@
-﻿
+﻿@model HHZ.Data.Physician
 @{
     ViewBag.Title = "ProfileSetting";
 }
@@ -427,20 +427,15 @@
                                     </div>
                                     <div class="tg-box tg-basicinformation">
                                         <div class="row tg-rowmargin">
-                                            <div class="col-md-4 col-sm-12 col-xs-12 tg-columnpadding">
+
+                                            <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
                                                 <div class="form-group tg-formgroup">
-                                                    <span class="tg-select">
-                                                        <select>
-                                                            <option>Title</option>
-                                                            <option>Title</option>
-                                                            <option>Title</option>
-                                                        </select>
-                                                    </span>
+                                                    <input type="text" name="firstname" class="form-control" placeholder="First Name">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
                                                 <div class="form-group tg-formgroup">
-                                                    <input type="text" name="firstname" class="form-control" placeholder="First Name">
+                                                    <input type="text" name="middlename" class="form-control" placeholder="Middle Name">
                                                 </div>
                                             </div>
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
@@ -451,6 +446,16 @@
                                             <div class="col-sm-12 col-xs-12 tg-columnpadding">
                                                 <input type="text" name="subtitle" class="form-control" placeholder="Sub Title (MDS - Paedodontics &amp; Preventive Dentistry)">
                                             </div>
+                                            <div class="col-sm-12 col-xs-12 tg-columnpadding">
+                                                <input type="text" name="ProfessionalStatement" class="form-control" placeholder="Professional  Statement">
+                                            </div>
+
+                                            <div class="col-md-2 col-sm-3 col-xs-12 pull-right tg-columnpadding">
+                                                <div class="form-group tg-formgroup">
+                                                    <button class="tg-btn tg-btn-lg" href="@Url.Action("EditBasicInformation","Home")" type="submit">add now</button>
+                                                </div>
+                                            </div>
+
                                         </div>
                                     </div>
                                 </div>
