@@ -7,9 +7,9 @@
         @Html.AntiForgeryToken()
 
        
-        <ul class="nav navbar-nav navbar-nav-bordered navbar-nav-margin-right ">
+        <ul class="nav navbar-nav ">
 
-            <li class="tg-hasdropdown tg-dropdown dropdown user">
+            <li class="tg-hasdropdown tg-dropdown dropdown">
                 @*@Html.ActionLink("Hello " + User.Identity.GetUserName() + "!", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })*@
 
                 @*<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -18,17 +18,20 @@
 
                 <div class="tg-admin">
                     <div class="tg-user">
-                        <div tg-dropdown>
+                        <div class="tg-dropdown">
                             <figure class="tg-adminpic">
-                                <span class="tg-dashboardbadge">3</span>
-                                <a href="dashboard.html"><img src="~/images/icons/icon-41.png" alt="image description"></a>
+                                <span class="tg-dashboardbadge">10</span>
+                                <a href="#"><img src="~/images/icons/icon-41.png" alt="image description"></a>
                             </figure>
 
 
                             <a href="javascript:void(0);" class="tg-usermenu tg-btndropdown">
                                 <em> Hi, @User.Identity.GetUserFirstname() !</em>
                             </a>
-                            <div class="dropdown-menu ">
+                            
+                            
+
+                            <div class="dropdown-menu dropdown-menu tg-dropdownbox tg-usermenu  ">
                                 <ul>
                                     @if (User.IsInRole("Admin"))
 
@@ -54,61 +57,61 @@
                                         </li>
 
                                         <li>
-                                            <a href="@Url.Action(" ProfileSetting","Home")">
+                                            <a href="@Url.Action("ProfileSetting","Home")">
                                                 <i class="fa fa-user"></i>
                                                 <span>Profile settings</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" JobLoction","Home")">
+                                            <a href="@Url.Action("JobLoction","Home")">
                                                 <i class="fa fa-location-arrow"></i>
                                                 <span>Job Locations</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" PrivateMessages","Home")">
+                                            <a href="@Url.Action("PrivateMessages","Home")">
                                                 <i class="fa fa-envelope-o"></i>
                                                 <span>Private Messages</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" Appointment","Home")">
+                                            <a href="@Url.Action("Appointment","Home")">
                                                 <i class="fa fa-calendar-check-o"></i>
                                                 <span>Appointments</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" AppointmentSetting","Home")">
+                                            <a href="@Url.Action("AppointmentSetting","Home")">
                                                 <i class="fa fa-gear"></i>
                                                 <span>Appointment Settings</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" FavoritListing","Home")">
+                                            <a href="@Url.Action("FavoritListing","Home")">
                                                 <i class="fa fa-heart"></i>
                                                 <span>Favourite Listings</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" Invoice","Home")">
+                                            <a href="@Url.Action("Invoice","Home")">
                                                 <i class="fa fa-clone"></i>
                                                 <span>Invoices</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" UpdatePackage","Home")">
+                                            <a href="@Url.Action("UpdatePackage","Home")">
                                                 <i class="fa fa-arrow-up"></i>
                                                 <span>Update Package</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" SecuritySettings","Home")">
+                                            <a href="@Url.Action("SecuritySettings","Home")">
                                                 <i class="fa fa-gears"></i>
                                                 <span>Security Settings</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <a href="@Url.Action(" PrivacySettings","Home")">
+                                            <a href="@Url.Action("PrivacySettings","Home")">
                                                 <i class="fa fa-eye"></i>
                                                 <span>Privacy Settings</span>
                                             </a>

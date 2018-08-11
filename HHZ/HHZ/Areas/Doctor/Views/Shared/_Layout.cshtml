@@ -102,21 +102,13 @@
 
                                         @*<li><a href="how-its-works.html">How It Works?</a></li>*@
                                         <li>@Html.ActionLink("How It Works", "HowItsWorks", "Home")  </li>
+                                        
+                                        @*<li><a href="blogpostgrid.html">Blog</a></li>*@
+                                        <li>@Html.ActionLink("Blog", "BlogPost", "Home")  </li>
 
-                                        <li class="tg-hasdropdown">
-                                            <a href="javascript:void(0);">
-                                                <i class="hidden-xs fa fa-navicon"></i>
-                                                <span class="hidden-lg hidden-md hidden-sm">Pages</span>
-                                            </a>
-                                            <ul class="tg-dropdownmenu">
-                                                @*<li><a href="blogpostgrid.html">Blog</a></li>*@
-                                                <li>@Html.ActionLink("Blog", "BlogPost", "Home")  </li>
+                                        @Html.Partial("_LoginPartial")
 
-                                                @*<li><a href="signin-signup.html">Signin-Signup</a></li>*@
-                                                @Html.Partial("_LoginPartial")
-                                            </ul>
-
-                                        </li>
+                                       
                                     </ul>
                                 </div>
                             </nav>

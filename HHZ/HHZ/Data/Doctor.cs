@@ -54,7 +54,8 @@ namespace HHZ.Data
 
         public ApplicationUser User { get; set; }
 
-        public virtual ICollection<DoctorQualification> DoctorQualifications { get; set; }   //  Navigational property
+        public virtual ICollection<DoctorQualification>  DoctorQualifications   { get; set; }   //  Navigational property
+        public virtual ICollection<DoctorSpecialization> DoctorSpecializations { get; set; }   //  Navigational property
 
 
 

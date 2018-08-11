@@ -30,7 +30,7 @@ namespace HHZ.Data
         public int DoctorId { get; set; }                   // Foreign Key
 
 
-        public virtual Specialization  Specialization { get; set; }        //  Navigational property
+        //public virtual Specialization  Specialization { get; set; }        //  Navigational property
 
         public virtual Doctor Doctors { get; set; }     //  Navigational property
     }

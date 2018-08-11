@@ -34,7 +34,7 @@ namespace HHZ.Data
 
 
 
-        public virtual DoctorSpecialization  DoctorSpecialization { get; set; }        //  Navigational property
+        //public virtual DoctorSpecialization  DoctorSpecialization { get; set; }        //  Navigational property
 
         public virtual Doctor Doctors { get; set; }     //  Navigational property
 

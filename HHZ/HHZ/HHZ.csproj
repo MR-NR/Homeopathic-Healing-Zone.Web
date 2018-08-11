@@ -229,6 +229,7 @@
       <DependentUpon>201808062023127_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Services\DoctorService.cs" />
     <Compile Include="ViewModels\ExternalLoginConfirmationViewModel.cs" />
     <Compile Include="ViewModels\AddPhoneNumberViewModel.cs" />
     <Compile Include="Models\ApplicationUser.cs" />
@@ -516,7 +517,6 @@
     <Folder Include="Areas\Doctor\Models\" />
     <Folder Include="Areas\Patient\Models\" />
     <Folder Include="Controllers\api\" />
-    <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

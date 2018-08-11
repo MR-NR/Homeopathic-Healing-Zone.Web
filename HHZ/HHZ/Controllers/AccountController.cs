@@ -67,7 +67,7 @@ namespace HHZ.Controllers
         {
             if (User.IsInRole(SecurityRoles.Admin))
             {
-                return RedirectToAction("Index", "Dashboard", new { area = "Admin" });
+                return RedirectToAction("Dashboard", "Home", new { area = "Admin" });
 
             }
 

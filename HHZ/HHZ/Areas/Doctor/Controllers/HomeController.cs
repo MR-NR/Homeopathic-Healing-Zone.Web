@@ -18,6 +18,7 @@ namespace HHZ.Areas.Doctor.Controllers
         
         public ActionResult Dashboard()
         {
+            //ViewBag.Name = "hellow from doctor";
       
             return View();
         }
