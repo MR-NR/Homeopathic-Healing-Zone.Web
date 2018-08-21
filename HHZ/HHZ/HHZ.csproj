@@ -217,6 +217,7 @@
     <Compile Include="Data\ClinicInfo.cs" />
     <Compile Include="Data\ClinicTime.cs" />
     <Compile Include="Data\Doctor.cs" />
+    <Compile Include="Data\DoctorExperience.cs" />
     <Compile Include="Data\DoctorSpecialization.cs" />
     <Compile Include="Data\DoctorType.cs" />
     <Compile Include="Data\DoctorQualification.cs" />
@@ -227,6 +228,26 @@
     <Compile Include="Migrations\201808062023127_Initial.cs" />
     <Compile Include="Migrations\201808062023127_Initial.Designer.cs">
       <DependentUpon>201808062023127_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808120624384_DoctorComplete.cs" />
+    <Compile Include="Migrations\201808120624384_DoctorComplete.Designer.cs">
+      <DependentUpon>201808120624384_DoctorComplete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808120711492_UpdateDoctor.cs" />
+    <Compile Include="Migrations\201808120711492_UpdateDoctor.Designer.cs">
+      <DependentUpon>201808120711492_UpdateDoctor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808120722112_UpdateDoctor1.cs" />
+    <Compile Include="Migrations\201808120722112_UpdateDoctor1.Designer.cs">
+      <DependentUpon>201808120722112_UpdateDoctor1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808130803150_UpdateDoctor2.cs" />
+    <Compile Include="Migrations\201808130803150_UpdateDoctor2.Designer.cs">
+      <DependentUpon>201808130803150_UpdateDoctor2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201808130914478_PopulateDoctorTypes.cs" />
+    <Compile Include="Migrations\201808130914478_PopulateDoctorTypes.Designer.cs">
+      <DependentUpon>201808130914478_PopulateDoctorTypes.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\DoctorService.cs" />
@@ -555,6 +576,21 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201808062023127_Initial.resx">
       <DependentUpon>201808062023127_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808120624384_DoctorComplete.resx">
+      <DependentUpon>201808120624384_DoctorComplete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808120711492_UpdateDoctor.resx">
+      <DependentUpon>201808120711492_UpdateDoctor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808120722112_UpdateDoctor1.resx">
+      <DependentUpon>201808120722112_UpdateDoctor1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808130803150_UpdateDoctor2.resx">
+      <DependentUpon>201808130803150_UpdateDoctor2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201808130914478_PopulateDoctorTypes.resx">
+      <DependentUpon>201808130914478_PopulateDoctorTypes.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

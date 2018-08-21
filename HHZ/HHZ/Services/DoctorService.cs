@@ -1,65 +1,64 @@
-﻿//using HHZ.Data;
-//using System.Collections.Generic;
-//using System.Data.Entity;
-//using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Threading.Tasks;
+using HHZ.Data;
 
-//namespace HHZ.Services
-//{
-//    public class DoctorService
-//    {
-//        public ApplicationDbContext Db { get; } = new ApplicationDbContext();
-
-
-//        public Doctor FindById(int? id)
-//        {
-//            return Db.Doctors
-//        }
+namespace HHZ.Services
+{
+    public class DoctorService
+    {
+        public ApplicationDbContext Db { get; } = new ApplicationDbContext();
 
 
-//        public Student FindByUserId(string userId)
-//        {
-//            var student= Db.Students.FirstOrDefault(st => st.UserId == userId);
-//            return student;
-//        }
-
-//        public IEnumerable<Student> Students()
-//        {
-//            return Db.Students.ToList();
-//        }
-
-//        public void Create(Student student)
-//        {
-//            Db.Students.Add(student);
-//            Db.SaveChanges();
-//        }
+        public Doctor FindById(int? id)
+        {
+            return Db.Doctors.Find(id);
+        }
 
 
-//        public async Task CreateAsync(Student student)
-//        {
-//            Db.Students.Add(student);
-//           await Db.SaveChangesAsync();
-//        }
+        public Doctor FindByUserId(string userId)
+        {
+            var doc = Db.Doctors.FirstOrDefault(D => D.UserId == userId);
+            return doc;
+        }
 
-//        public void Update(Student student)
-//        {
-//            Db.Entry(student).State = EntityState.Modified;
-//            Db.SaveChanges();
-//        }
+        public IEnumerable<Doctor> Doctors()
+        {
+            return Db.Doctors.ToList();
+        }
 
-//        public void Update(Student student, string userId)
-//        {
-//            student.UserId = userId;
-//            Db.Entry(student).State = EntityState.Modified;
-//            Db.SaveChanges();
-//        }
+        public void Create(Doctor doctor)
+        {
+            Db.Doctors.Add(doctor);
+            Db.SaveChanges();
+        }
 
 
-//        public void Delete(Student student)
-//        {
-//            Db.Students.Remove(student);
-//            Db.SaveChanges();
-//        }
-//    }
+        public async Task CreateAsync(Doctor doctor)
+        {
+            Db.Doctors.Add(doctor);
+           await Db.SaveChangesAsync();
+        }
 
-   
-//}
+        public void Update(Doctor doctor)
+        {
+            Db.Entry(doctor).State = EntityState.Modified;
+            Db.SaveChanges();
+        }
+
+        public void Update(Doctor doctor, string userId)
+        {
+            doctor.UserId = userId;
+            Db.Entry(doctor).State = EntityState.Modified;
+            Db.SaveChanges();
+        }
+
+
+        public void Delete(Doctor doctor)
+        {
+            Db.Doctors.Remove(doctor);
+            Db.SaveChanges();
+        }
+    }
+}

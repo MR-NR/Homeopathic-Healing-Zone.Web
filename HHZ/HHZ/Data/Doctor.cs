@@ -1,7 +1,6 @@
 ﻿using HHZ.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -14,8 +13,9 @@ namespace HHZ.Data
         public string ProfessionalStatement { get; set; }
 
         public string Biography { get; set; }
+
         
-        public DateTime PracticingFrom { get; set; }
+        //public DateTime PracticingFrom { get; set; }
         
         public string ContactNumber  { get; set; }
         
@@ -35,14 +35,22 @@ namespace HHZ.Data
 
         public string Linkedin { get; set; }
 
+        public string Rss { get; set; }
+
+        public string GooglePlus { get; set; }
+
+        public string Youtube { get; set; }
+
         public string Website { get; set; }
 
 
 
 
+        
 
         
         public int DoctorTypeId { get; set; }          // Foreign key
+
 
         public string UserId { get; set; }             // Foreign Key
 
@@ -50,16 +58,18 @@ namespace HHZ.Data
 
 
 
-
+        public virtual DoctorType DoctorType { get; set; }
 
         public ApplicationUser User { get; set; }
 
+        
+
         public virtual ICollection<DoctorQualification>  DoctorQualifications   { get; set; }   //  Navigational property
         public virtual ICollection<DoctorSpecialization> DoctorSpecializations { get; set; }   //  Navigational property
+        public virtual ICollection<DoctorExperience>     DoctorExperiences { get; set; }   //  Navigational property
 
 
 
 
     }
-
 }

@@ -130,11 +130,21 @@
 
 
                                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
-                                                                @*<div class="form-group tg-formgroup">*@
+
                                                                 <span class="tg-select">
-                                                                    @Html.DropDownList("UserRoles", (SelectList)ViewBag.Name, " ", new { @class = "form-group tg-formgroup " })
+                                                                    @*@Html.DropDownList("UserRoles", (SelectList)ViewBag.Name ,  new { @class = "form-group tg-formgroup " })*@
+                                                                      @Html.DropDownListFor(r => r.Role, new SelectList(Model.Roles, "Name" , "Name"), "" , new { @class = "form-group tg-formgroup " })
                                                                 </span>
-                                                                @*</div>*@
+
+                                                            </div>
+                                                            <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
+
+                                                                <span class="tg-select">
+                                                                    @*@Html.DropDownList("DoctorTypes", (SelectList)ViewBag.Types,  new { @class = "form-group tg-formgroup " })*@
+                                                                    @Html.DropDownListFor(d => d.DoctorType , new SelectList(Model.DoctorTypes , "DoctorTypeId", "Name"), "" , new { @class = "form-group tg-formgroup " })
+
+                                                                </span>
+
                                                             </div>
                                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
                                                                 <div class="form-group tg-formgroup">

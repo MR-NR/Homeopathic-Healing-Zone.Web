@@ -11,14 +11,14 @@ namespace HHZ.Data
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
 
-        //public DbSet<Doctor> Doctors { get; set; }
-        //public DbSet<DoctorType> DoctorTypes { get; set; }
-        //public DbSet<DoctorQualification> PhysicianQualifications { get; set; }
-        //public DbSet<DoctorSpecialization> DoctorSpecializations { get; set; }
-        //public DbSet<Specialization> Specializations { get; set; }
-
-        //public DbSet<ClinicInfo> ClinicInfos { get; set; }
-        //public DbSet<ClinicTime> ClinicTimes { get; set; }
+        public DbSet<Doctor> Doctors { get; set; }
+        public DbSet<DoctorType> DoctorTypes { get; set; }
+        public DbSet<DoctorQualification> PhysicianQualifications { get; set; }
+        public DbSet<DoctorSpecialization> DoctorSpecializations { get; set; }
+        public DbSet<DoctorExperience> DoctorExperiences { get; set; }
+        public DbSet<Specialization> Specializations { get; set; }
+        public DbSet<ClinicInfo> ClinicInfos { get; set; }
+        public DbSet<ClinicTime> ClinicTimes { get; set; }
         //public DbSet<Sign> signs { get; set; }
         //public DbSet<SignsValue> SignsValues { get; set; }
         //public DbSet<Test> Tests { get; set; }

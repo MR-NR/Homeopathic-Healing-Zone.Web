@@ -17,6 +17,6 @@ namespace HHZ.Data
 
         public bool Status { get; set; }
 
-        public int Clinicinfo { get; set; }   //Foreign Key
+        public int ClinicInfoId { get; set; }   //Foreign Key
     }
 }

@@ -8,7 +8,7 @@ namespace HHZ.Data
 {
     public class ClinicInfo
     {
-        [Key]
+        
         public int ClinicInfoId { get; set; }
 
         public string Name { get; set; }
@@ -21,6 +21,12 @@ namespace HHZ.Data
 
         public int DoctorId { get; set; }
 
+
+
         public virtual Doctor Doctor { get; set; }
+
+        public virtual ICollection<ClinicTime> ClinicTimes { get; set; }   //  Navigational property
+
+
     }
 }

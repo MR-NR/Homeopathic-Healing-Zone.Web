@@ -1,4 +1,8 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Web.Security;
+using HHZ.Data;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace HHZ.ViewModels
 {
@@ -6,7 +10,14 @@ namespace HHZ.ViewModels
     {
         [Required]
         [Display(Name = "User Roles")]
-        public string UserRoles { get; set; }
+        //public string UserRoles { get; set; }
+        public string Role { get; set; }
+        public List<IdentityRole> Roles { get; set; }
+
+        [Required]
+        [Display(Name = "Doctor Types")]
+        public  int DoctorType { get; set; }
+        public IEnumerable<DoctorType> DoctorTypes { get; set; }
 
 
         [Required]

@@ -1,4 +1,4 @@
-﻿@model HHZ.Data.Physician
+﻿@model HHZ.Data.Doctor
 @{
     ViewBag.Title = "ProfileSetting";
 }
@@ -98,11 +98,12 @@
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="#">
+                                    <a href="javascript:document.getElementById('logoutForm').submit()">
                                         <i class="fa fa-sign-out"></i>
-                                        <span>Logout</span>
+                                        <span>LogOff</span>
                                     </a>
                                 </li>
+
                             </ul>
                         </nav>
 
@@ -425,7 +426,7 @@
                                     <div class="tg-dashboardboxtitle">
                                         <h2>Basic Information</h2>
                                     </div>
-                                    <div class="tg-box tg-basicinformation">
+                                    <div class="tg-box ">
                                         <div class="row tg-rowmargin">
 
                                             <div class="col-md-4 col-sm-6 col-xs-12 tg-columnpadding">
@@ -444,12 +445,11 @@
                                                 </div>
                                             </div>
                                             <div class="col-sm-12 col-xs-12 tg-columnpadding">
-                                                <input type="text" name="subtitle" class="form-control" placeholder="Sub Title (MDS - Paedodontics &amp; Preventive Dentistry)">
+                                                <input type="text" name="subtitle" class="form-control tg-formgroup" placeholder="Sub Title (MDS - Paedodontics &amp; Preventive Dentistry)">
                                             </div>
                                             <div class="col-sm-12 col-xs-12 tg-columnpadding">
-                                                <input type="text" name="ProfessionalStatement" class="form-control" placeholder="Professional  Statement">
+                                                <input type="text" name="ProfessionalStatement" class="form-control tg-formgroup" placeholder="Professional  Statement">
                                             </div>
-
                                             <div class="col-md-2 col-sm-3 col-xs-12 pull-right tg-columnpadding">
                                                 <div class="form-group tg-formgroup">
                                                     <button class="tg-btn tg-btn-lg" href="@Url.Action("EditBasicInformation","Home")" type="submit">add now</button>

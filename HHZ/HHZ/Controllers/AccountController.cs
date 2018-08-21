@@ -12,6 +12,8 @@ using HHZ.Models;
 using HHZ.Data;
 using HHZ.Common;
 using HHZ.ViewModels;
+using  HHZ.Services;
+
 
 namespace HHZ.Controllers
 {
@@ -20,15 +22,17 @@ namespace HHZ.Controllers
     [Authorize]
     public class AccountController : Controller
     {
+        readonly DoctorService _doctorService = new DoctorService();
+
         private ApplicationSignInManager _signInManager;
         private ApplicationUserManager _userManager;
 
 
-        ApplicationDbContext context;
+        ApplicationDbContext _context;
 
         public AccountController()
         {
-            context = new ApplicationDbContext();
+            _context = new ApplicationDbContext();
         }
 
 
@@ -165,10 +169,20 @@ namespace HHZ.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
-                                            .ToList(), "Name", "Name");
 
-            return View();
+            var viewmodel = new RegisterViewModel
+            {
+                Roles = _context.Roles.Where(u => !u.Name.Contains("Admin")).ToList(),
+                DoctorTypes = _context.DoctorTypes.ToList(),
+                
+
+            };
+            //ViewBag.Name = new SelectList(_context.Roles.Where(u => !u.Name.Contains("Admin"))
+            //                                .ToList(), "Name", "Name");
+
+            //ViewBag.Types = new SelectList(_context.DoctorTypes.ToList(), "Id", "Name");
+
+            return View(viewmodel);
         }
 
         //
@@ -192,15 +206,24 @@ namespace HHZ.Controllers
                 {
                     //await SignInManager.SignInAsync(user, isPersistent:false, rememberBrowser:false);
 
-                    //var student = new Student
-                    //{
-                    //    FirstName = model.FirstName,
-                    //    LastName = model.LastName,
-                    //    UserId = user.Id,
-                    //    Email = model.Email,
-                    //    Mobile = model.Mobile,
-                    //};
-                    //await _studentService.CreateAsync(student);
+
+
+
+
+                    var doctor = new Doctor
+                    {
+                        DoctorTypeId = Convert.ToInt32(model.DoctorType),
+                        UserId = user.Id
+                    };
+
+
+                    await _doctorService.CreateAsync(doctor);
+
+                    //Assign Role to user Here given by user      
+                    await UserManager.AddToRoleAsync(user.Id, model.Role);
+                    
+                    //Ends Here 
+
 
                     //await UserManager.AddToRoleAsync(user.Id, SecurityRoles.Student);
 
@@ -213,17 +236,21 @@ namespace HHZ.Controllers
                     // await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
 
-                    //Assign Role to user Here      
-                    await this.UserManager.AddToRoleAsync(user.Id, model.UserRoles);
-                    //Ends Here 
+                    
 
 
                     return RedirectToAction("Index", "Home");
                 }
 
+                //Roles = _context.Roles.Where(u => !u.Name.Contains("Admin")).ToList(),
+                //DoctorTypes = _context.DoctorTypes.ToList();
 
-                ViewBag.Name = new SelectList(context.Roles.Where(u => !u.Name.Contains("Admin"))
-                                          .ToList(), "Name", "Name");
+
+                ViewBag.Name = new SelectList(_context.Roles.Where(u => !u.Name.Contains("Admin"))
+                                          .ToList(), "Id", "Name");
+
+                ViewBag.Types = new SelectList(_context.DoctorTypes.ToList(), "DoctorTypeId", "Name");
+
                 AddErrors(result);
             }
 
@@ -452,6 +479,7 @@ namespace HHZ.Controllers
         {
             AuthenticationManager.SignOut(DefaultAuthenticationTypes.ApplicationCookie);
             return RedirectToAction("Index", "Home");
+            
         }
 
         //

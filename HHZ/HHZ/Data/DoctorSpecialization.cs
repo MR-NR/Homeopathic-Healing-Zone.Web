@@ -15,8 +15,12 @@ namespace HHZ.Data
         [Required]
         public string InstituteName { get; set; }
 
-        [Required]
-        public DateTime ProcurementYear { get; set; }
+        //[Required]
+        //public DateTime ProcurementYear { get; set; }
+
+        public DataType StartingDate { get; set; }
+
+        public DataType EndingDate { get; set; }
 
         [Required]
         public string Country { get; set; }
@@ -33,5 +37,7 @@ namespace HHZ.Data
         //public virtual Specialization  Specialization { get; set; }        //  Navigational property
 
         public virtual Doctor Doctors { get; set; }     //  Navigational property
+
+        public virtual Specialization Specializations { get; set; }
     }
 }
