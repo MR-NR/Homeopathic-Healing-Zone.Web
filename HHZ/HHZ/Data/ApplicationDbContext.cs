@@ -19,13 +19,13 @@ namespace HHZ.Data
         public DbSet<Specialization> Specializations { get; set; }
         public DbSet<ClinicInfo> ClinicInfos { get; set; }
         public DbSet<ClinicTime> ClinicTimes { get; set; }
-        //public DbSet<Sign> signs { get; set; }
-        //public DbSet<SignsValue> SignsValues { get; set; }
-        //public DbSet<Test> Tests { get; set; }
-        //public DbSet<Parameter> Parameters { get; set; }
-        //public DbSet<ParameterValues> ParameterValues { get; set; }
-        //public DbSet<Symptom> symptoms { get; set; }
-        //public DbSet<SymptomMedicine> symptomMedicines { get; set; }
+        public DbSet<Sign> Signs { get; set; }
+        public DbSet<SignsValue> SignsValues { get; set; }
+        public DbSet<Test> Tests { get; set; }
+        public DbSet<Parameter> Parameters { get; set; }
+        public DbSet<ParameterValues> ParameterValues { get; set; }
+        public DbSet<Symptom> Symptoms { get; set; }
+        public DbSet<SymptomMedicine> SymptomMedicines { get; set; }
 
 
 

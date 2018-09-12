@@ -177,10 +177,10 @@ namespace HHZ.Controllers
                 
 
             };
-            //ViewBag.Name = new SelectList(_context.Roles.Where(u => !u.Name.Contains("Admin"))
-            //                                .ToList(), "Name", "Name");
+            ViewBag.Name = new SelectList(_context.Roles.Where(u => !u.Name.Contains("Admin"))
+                                            .ToList(), "Name", "Name");
 
-            //ViewBag.Types = new SelectList(_context.DoctorTypes.ToList(), "Id", "Name");
+            ViewBag.Types = new SelectList(_context.DoctorTypes.ToList(), "Id", "Name");
 
             return View(viewmodel);
         }
