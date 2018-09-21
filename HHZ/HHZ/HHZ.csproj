@@ -223,6 +223,14 @@
     <Compile Include="Data\DoctorQualification.cs" />
     <Compile Include="Data\Parameter.cs" />
     <Compile Include="Data\ParameterValues.cs" />
+    <Compile Include="Data\Patient.cs" />
+    <Compile Include="Data\PatientFamilyHistory.cs" />
+    <Compile Include="Data\PatientLabTest.cs" />
+    <Compile Include="Data\PatientPastHistory.cs" />
+    <Compile Include="Data\PatientPqrs.cs" />
+    <Compile Include="Data\PatientReportDetail.cs" />
+    <Compile Include="Data\PatientSign.cs" />
+    <Compile Include="Data\PatientSymptom.cs" />
     <Compile Include="Data\Sign.cs" />
     <Compile Include="Data\SignsValue.cs" />
     <Compile Include="Data\Specialization.cs" />
@@ -267,6 +275,78 @@
     <Compile Include="Migrations\201808271017033_Symptom.cs" />
     <Compile Include="Migrations\201808271017033_Symptom.Designer.cs">
       <DependentUpon>201808271017033_Symptom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809200345270_CorrectSpellingMaritalStatus.cs" />
+    <Compile Include="Migrations\201809200345270_CorrectSpellingMaritalStatus.Designer.cs">
+      <DependentUpon>201809200345270_CorrectSpellingMaritalStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210331412_AddPatient.cs" />
+    <Compile Include="Migrations\201809210331412_AddPatient.Designer.cs">
+      <DependentUpon>201809210331412_AddPatient.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210336339_JoinPatientIdentyTable.cs" />
+    <Compile Include="Migrations\201809210336339_JoinPatientIdentyTable.Designer.cs">
+      <DependentUpon>201809210336339_JoinPatientIdentyTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210341567_AddPatientSign.cs" />
+    <Compile Include="Migrations\201809210341567_AddPatientSign.Designer.cs">
+      <DependentUpon>201809210341567_AddPatientSign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210351303_UpdatePatientSign.cs" />
+    <Compile Include="Migrations\201809210351303_UpdatePatientSign.Designer.cs">
+      <DependentUpon>201809210351303_UpdatePatientSign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210405192_JoinPatientWithSign.cs" />
+    <Compile Include="Migrations\201809210405192_JoinPatientWithSign.Designer.cs">
+      <DependentUpon>201809210405192_JoinPatientWithSign.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210415410_AddPatientFamilyHistory.cs" />
+    <Compile Include="Migrations\201809210415410_AddPatientFamilyHistory.Designer.cs">
+      <DependentUpon>201809210415410_AddPatientFamilyHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210419276_JoinPatientWithFamilyHistory.cs" />
+    <Compile Include="Migrations\201809210419276_JoinPatientWithFamilyHistory.Designer.cs">
+      <DependentUpon>201809210419276_JoinPatientWithFamilyHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210424541_AddPatientPqrs.cs" />
+    <Compile Include="Migrations\201809210424541_AddPatientPqrs.Designer.cs">
+      <DependentUpon>201809210424541_AddPatientPqrs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210429023_JoinPatientWithPatientPqrs.cs" />
+    <Compile Include="Migrations\201809210429023_JoinPatientWithPatientPqrs.Designer.cs">
+      <DependentUpon>201809210429023_JoinPatientWithPatientPqrs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210438319_AddPatientLabTest.cs" />
+    <Compile Include="Migrations\201809210438319_AddPatientLabTest.Designer.cs">
+      <DependentUpon>201809210438319_AddPatientLabTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210448498_AddPatientReportDetail.cs" />
+    <Compile Include="Migrations\201809210448498_AddPatientReportDetail.Designer.cs">
+      <DependentUpon>201809210448498_AddPatientReportDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210511282_JoinPatientLabTestWithReport.cs" />
+    <Compile Include="Migrations\201809210511282_JoinPatientLabTestWithReport.Designer.cs">
+      <DependentUpon>201809210511282_JoinPatientLabTestWithReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210526338_JoinPatientWithPatientLabTest.cs" />
+    <Compile Include="Migrations\201809210526338_JoinPatientWithPatientLabTest.Designer.cs">
+      <DependentUpon>201809210526338_JoinPatientWithPatientLabTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210710071_AddPatientPastHistory.cs" />
+    <Compile Include="Migrations\201809210710071_AddPatientPastHistory.Designer.cs">
+      <DependentUpon>201809210710071_AddPatientPastHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210721328_JoinPatientWithPastHistory.cs" />
+    <Compile Include="Migrations\201809210721328_JoinPatientWithPastHistory.Designer.cs">
+      <DependentUpon>201809210721328_JoinPatientWithPastHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210730054_AddPatientSymptom.cs" />
+    <Compile Include="Migrations\201809210730054_AddPatientSymptom.Designer.cs">
+      <DependentUpon>201809210730054_AddPatientSymptom.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809210732139_JoinPatientWithSymptom.cs" />
+    <Compile Include="Migrations\201809210732139_JoinPatientWithSymptom.Designer.cs">
+      <DependentUpon>201809210732139_JoinPatientWithSymptom.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Services\DoctorService.cs" />
@@ -626,6 +706,60 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201808271017033_Symptom.resx">
       <DependentUpon>201808271017033_Symptom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809200345270_CorrectSpellingMaritalStatus.resx">
+      <DependentUpon>201809200345270_CorrectSpellingMaritalStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210331412_AddPatient.resx">
+      <DependentUpon>201809210331412_AddPatient.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210336339_JoinPatientIdentyTable.resx">
+      <DependentUpon>201809210336339_JoinPatientIdentyTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210341567_AddPatientSign.resx">
+      <DependentUpon>201809210341567_AddPatientSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210351303_UpdatePatientSign.resx">
+      <DependentUpon>201809210351303_UpdatePatientSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210405192_JoinPatientWithSign.resx">
+      <DependentUpon>201809210405192_JoinPatientWithSign.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210415410_AddPatientFamilyHistory.resx">
+      <DependentUpon>201809210415410_AddPatientFamilyHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210419276_JoinPatientWithFamilyHistory.resx">
+      <DependentUpon>201809210419276_JoinPatientWithFamilyHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210424541_AddPatientPqrs.resx">
+      <DependentUpon>201809210424541_AddPatientPqrs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210429023_JoinPatientWithPatientPqrs.resx">
+      <DependentUpon>201809210429023_JoinPatientWithPatientPqrs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210438319_AddPatientLabTest.resx">
+      <DependentUpon>201809210438319_AddPatientLabTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210448498_AddPatientReportDetail.resx">
+      <DependentUpon>201809210448498_AddPatientReportDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210511282_JoinPatientLabTestWithReport.resx">
+      <DependentUpon>201809210511282_JoinPatientLabTestWithReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210526338_JoinPatientWithPatientLabTest.resx">
+      <DependentUpon>201809210526338_JoinPatientWithPatientLabTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210710071_AddPatientPastHistory.resx">
+      <DependentUpon>201809210710071_AddPatientPastHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210721328_JoinPatientWithPastHistory.resx">
+      <DependentUpon>201809210721328_JoinPatientWithPastHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210730054_AddPatientSymptom.resx">
+      <DependentUpon>201809210730054_AddPatientSymptom.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809210732139_JoinPatientWithSymptom.resx">
+      <DependentUpon>201809210732139_JoinPatientWithSymptom.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

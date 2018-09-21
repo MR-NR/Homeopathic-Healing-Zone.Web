@@ -23,7 +23,7 @@ namespace HHZ.Data
         
         public int Cnic { get; set; }
 
-        public bool MaterialStatus { get; set; }
+        public bool MaritalStatus { get; set; }
   
         public string SpouseName { get; set; }
 

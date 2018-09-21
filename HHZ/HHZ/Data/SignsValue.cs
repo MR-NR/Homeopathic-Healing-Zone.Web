@@ -8,11 +8,11 @@ namespace HHZ.Data
     public class SignsValue
     {
 
-        public Guid SignsValueId { get; set; }
+        public int SignsValueId { get; set; }
 
         public string ValueName { get; set; }
 
-        public Guid SignId { get; set; }
+        public int SignId { get; set; }
 
 
         public virtual Sign Sign { get; set; }

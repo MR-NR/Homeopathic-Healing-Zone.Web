@@ -7,7 +7,7 @@ namespace HHZ.Data
 {
     public class Sign
     {
-        public Guid SignId { get; set; }
+        public int SignId { get; set; }
 
 
         public string Name { get; set; }

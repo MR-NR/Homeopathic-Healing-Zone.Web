@@ -26,6 +26,14 @@ namespace HHZ.Data
         public DbSet<ParameterValues> ParameterValues { get; set; }
         public DbSet<Symptom> Symptoms { get; set; }
         public DbSet<SymptomMedicine> SymptomMedicines { get; set; }
+        public DbSet<Patient> Patients { get; set; }
+        public DbSet<PatientSign> PatientSigns { get; set; }
+        public DbSet<PatientFamilyHistory> PatientFamilyHistories { get; set; }
+        public DbSet<PatientPqrs> PatientPqrses { get; set; }
+        public DbSet<PatientLabTest> PatientLabTests { get; set; }
+        public DbSet<PatientReportDetail> PatientReportDetails { get; set; }
+        public DbSet<PatientPastHistory> PatientPastHistories { get; set; }
+        public DbSet<PatientSymptom> PatientSymptoms { get; set; }
 
 
 
